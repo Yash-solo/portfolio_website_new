@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+    <div class="nav">
+        <h2 class="text_nav">Portfolio</h2>
+        <button onclick="toogle_mode()">Theme</button>
+    </div>
+    <div class="hero">
+        <div class="background"></div>
+        <div class="image">
+        </div>
+    </div>
+    <div class="name_contect">
+        <h1>Name: Yashraj Bhati</h1>
+        <h3>Profession: Student & Future Web Developer</h3>
+        <button onclick="goToFooter()">Contect me</button>
+    </div>
+    <section class="about">
+
+        <h2>About Me:- </h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati possimus at quos sapiente delectus
+            doloribus
+            sequi eveniet porro distinctio tenetur ea tempore alias sint blanditiis voluptas consequuntur, impedit
+            aperiam
+            voluptatibus.
+            Voluptatibus optio, accusantium, dicta ipsum, aliquid eos voluptates eius quaerat eaque enim provident omnis
+            exercitationem corrupti nesciunt odit dolorem distinctio earum cupiditate quasi sunt quidem modi ratione.
+            Non,
+            blanditiis ad!
+            Expedita, ratione iste nulla quod soluta omnis fugit? At sequi eligendi laborum reiciendis eveniet
+            necessitatibus alias rerum fugiat nam quia fuga, repellat exercitationem eum porro! Necessitatibus iste eius
+            maiores illum?
+            Ut temporibus odit aperiam placeat totam id, laudantium nam? Necessitatibus recusandae aut voluptates
+            voluptatum
+            quaerat explicabo debitis, a eum repudiandae tenetur provident. Nam maiores architecto tenetur dolorem
+            placeat,
+            dolor amet.
+            Iure laborum itaque pariatur! Sapiente rem, error cupiditate similique pariatur soluta ipsum, minus, totam
+            natus
+            dolorem officiis incidunt odit ut tempora nesciunt quisquam molestiae. Similique eaque aperiam qui culpa
+            illum.
+        </p>
+    </section>
+    <section class="Skills">
+        <h2>Skills:- </h2>
+        <p>Languages:- Python, javascript , website development , C++ , C</p>
+        <P>Other skills</P>
+        <p>Html,CSS, Designing, UI ,UX</p>
+    </section>
+    <section class="project">
+        <div class="firstProj">
+            <h1>Projects</h1>
+            <br>
+            <br>
+            <h2>1. Calculator App</h2>
+            <br>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, aspernatur amet corporis, modi
+                tempore quam eveniet illum, obcaecati sapiente unde assumenda temporibus! Modi architecto dignissimos
+                totam! Magnam
+                veniam earum maiores velit, asperiores odit suscipit. Cum, beatae enim culpa quia perferendis alias amet
+                velit!</h4>
+
+            <p>LINK:-</p>
+            <a href="hello.html" style="color:rgb(3, 0, 29)">Calculator app link</a>
+        </div>
+        <div class="secondProj">
+            <h2>2.To Do List App</h2>
+            <br>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, aspernatur amet corporis, modi
+                tempore quam eveniet illum, obcaecati sapiente unde assumenda temporibus! Modi architecto dignissimos
+                totam! Magnam
+                veniam earum maiores velit, asperiores odit suscipit. Cum, beatae enim culpa quia perferendis alias amet
+                velit!</h4>
+
+            <p>LINK:-</p>
+            <a href="Todo-app.py" style="color:rgb(3, 0, 29)">To do app link</a>
+        </div>
+        <div class="thirdProj">
+            <h2>3.Portfolio Website</h2>
+            <br>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, aspernatur amet corporis, modi
+                tempore quam eveniet illum, obcaecati sapiente unde assumenda temporibus! Modi architecto dignissimos
+                totam! Magnam
+                veniam earum maiores velit, asperiores odit suscipit. Cum, beatae enim culpa quia perferendis alias amet
+                velit!</h4>
+
+            <p>LINK:-</p>
+            <a href="#" style="color:rgb(3, 0, 29)">Portfolio website link</a>
+        </div>
+    </section>
+    <hr>
+    <footer class="contect" id="contact">
+        <div class="contect_us">
+            <h2>Write here your email , name ,profession etc.</h2>
+            <div><input type="text" placeholder="Name" id="Name_user"></div>
+            <div>
+                <input type="text" placeholder="Email adress" id="mail_input">
+            </div>
+            <div><input type="text" placeholder="Profession" id="profession_input"></div>
+            <button onclick="show_alert()">Enter</button>
+        </div>
+    </footer>
+</body>
+<script>
+    function toogle_mode() {
+        document.body.classList.toggle('dark');
+        document.querySelector('.nav').classList.toggle('dark');
+        document.querySelector('.background').classList.toggle('dark');
+        document.querySelector('.about').classList.toggle('dark');
+        document.querySelector('.Skills').classList.toggle('dark');
+        document.querySelector('.firstProj').classList.toggle('dark');
+        document.querySelector('.secondProj').classList.toggle('dark');
+        document.querySelector('.thirdProj').classList.toggle('dark');
+
+
+    }
+    function goToFooter() {
+        document.getElementById("contact").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+    let name = document.getElementById('Name_user')
+    let adress = document.getElementById('mail_input')
+    let passion = document.getElementById('profession_input')
+    function show_alert() {
+        if (name.value == "") {
+            alert("Please Enter your name");
+        } else if (adress.value === "") {
+            alert("Please Enter your email adress");
+        } else if (passion.value === "") {
+            alert("Please Enter your passion");
+        } else {
+            alert("Done your contect is saved");
+        }
+    }
+</script>
+
+</html>
